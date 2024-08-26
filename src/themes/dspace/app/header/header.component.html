@@ -1,0 +1,36 @@
+<header id="main-site-header">
+  <div class="h-100 d-flex flex-column" id="main-site-header-container">
+
+    <div id="header-top" class="w-100 d-flex flex-row justify-content-end align-items-center pr-4 py-1" style="background-color: #a72964;">
+      <ds-themed-search-navbar></ds-themed-search-navbar>
+      <div role="menubar" class="d-flex flex-row align-items-center gapx-1">
+        <ds-themed-lang-switch></ds-themed-lang-switch>
+        <ds-context-help-toggle></ds-context-help-toggle>
+        <ds-impersonate-navbar></ds-impersonate-navbar>
+        <ds-themed-auth-nav-menu></ds-themed-auth-nav-menu>
+      </div>
+      <div id="mobile-navbar-toggler" class="d-block d-lg-none ml-3" *ngIf="(isMobile$ | async)">
+        <button id="navbar-toggler" class="btn" type="button" (click)="toggleNavbar()"
+                [attr.aria-label]="'nav.toggle' | translate" aria-controls="collapsible-mobile-navbar" [attr.aria-expanded]="!(isNavBarCollapsed$ | async)">
+          <span class="fas fa-bars fa-fw fa-xl toggler-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="header-middle" class="w-100 d-flex flex-row justify-content-center align-items-center px-3 pt-3 pb-0">
+      <a class="d-block my-2 my-md-0" routerLink="/home" [attr.aria-label]="'home.title' | translate">
+        <img id="header-logo" src="assets/images/logo-metabiblioteca.png" [attr.alt]="'menu.header.image.logo' | translate"/>
+        <span class="separator"></span>
+      </a>
+      <div class="m-2 text-center justify-content-center align-items-center">
+        <h5 class="font-weight-bold">Repositorio<br>Digital</h5>
+      </div>
+    </div>
+
+    <div id="header-bottom" [attr.role]="(isMobile$ | async) ? 'navigation' : 'presentation'" [attr.aria-label]="(isMobile$ | async) ? ('nav.main.description' | translate) : null" class="h-100 w-100 flex-fill d-flex flex-row flex-nowrap justify-content-center align-items-center">
+        <nav *ngIf="!(isMobile$ | async)" class="navbar navbar-expand p-0 align-items-stretch align-self-stretch" id="desktop-navbar" [attr.aria-label]="'nav.main.description' | translate">
+          <ds-themed-navbar></ds-themed-navbar>
+        </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,16 @@
+<ds-themed-home-news></ds-themed-home-news>
+<div class="container">
+  <ng-container *ngIf="(site$ | async) as site">
+    <ds-view-tracker [object]="site"></ds-view-tracker>
+  </ng-container>
+  <ds-themed-search-form [inPlaceSearch]="false" [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
+  <ds-quick-access></ds-quick-access>
+  <ds-meta-nav></ds-meta-nav>
+  <!--<ds-themed-top-level-community-list></ds-themed-top-level-community-list>-->
+</div>
+<ds-list-community></ds-list-community>
+<div class="container">
+  <ds-last-news></ds-last-news>
+  <!--<ds-recent-item-list *ngIf="recentSubmissionspageSize>0"></ds-recent-item-list>-->
+  <ds-count-entity></ds-count-entity>
+</div>

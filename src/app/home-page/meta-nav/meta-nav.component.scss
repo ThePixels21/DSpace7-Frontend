@@ -1,0 +1,37 @@
+.pink {
+    color: #a72964;
+}
+
+.green {
+    color: #b1d83a;
+}
+
+.blue {
+    color: #56a2a7;
+}
+
+.contentBtnHome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnHome {
+    border: 2px solid;
+    border-radius: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+  }
+  

@@ -1,0 +1,93 @@
+#carouselControls {
+    height: 100%;
+}
+
+.image-container {
+    width: 150px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.image-container img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.content-container {
+    flex: 3;
+}
+
+.border-pink {
+    border: 2px solid #a72964;
+    border-radius: 15px;
+}
+
+.btn-pink {
+    background-color: #a72964;
+    color: white;
+}
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: left;
+}
+
+.custom-control-prev, .custom-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-control-prev-icon::before {
+    content: '<';
+    font-size: 8rem;
+    color: #b1d83a;
+    display: inline-block;
+}
+
+.custom-control-next-icon::before {
+    content: '>';
+    font-size: 8rem;
+    color: #b1d83a;
+    display: inline-block;
+}
+
+.btn {
+    height: 20px;
+    width: 100px;
+    line-height: 20px;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 8px;
+    }
+
+    .image-container img {
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .content-container {
+        margin-left: 0;
+    }
+
+    .btn {
+        width: 80px;
+        font-size: 0.8rem;
+    }
+
+    .custom-control-prev-icon::before, .custom-control-next-icon::before {
+        font-size: 4rem;
+    }
+}
